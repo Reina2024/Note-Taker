@@ -7,7 +7,7 @@ notes.get('/', (req, res) => {
   console.info(`${req.method} notes requested`);
 
   // Read notes from JSON file and send as response
-  readFromFile('./db/notes.json')
+  readFromFile('./db/db.json')
     .then((data) => res.json(JSON.parse(data)))
     .catch((err) => res.status(500).json({ error: 'Failed to read notes' })); // Handle errors
 });
@@ -25,7 +25,7 @@ notes.post('/', (req, res) => {
       id: uuidv4(), // Generate a unique ID for the note
     };
 
-    readAndAppend(newNote, './db/notes.json')
+    readAndAppend(newNote, './db/db.json')
       .then(() => {
         console.log("Note Added");
         res.status(201).json({ message: "Note Added", note: newNote });
@@ -42,11 +42,11 @@ notes.post('/', (req, res) => {
 // API route to delete a note by ID
 notes.delete("/:id", (req, res) => {
   const id = req.params.id;
-  readFromFile("./db/notes.json")
+  readFromFile("./db/db.json")
     .then((data) => JSON.parse(data))
     .then((json) => {
       const result = json.filter((note) => note.id !== id);
-      return writeToFile("./db/notes.json", result);
+      return writeToFile("./db/db.json", result);
     })
     .then(() => res.json(`Note ${id} has been deleted`))
     .catch((err) => res.status(500).json({ error: 'Failed to delete note' }));

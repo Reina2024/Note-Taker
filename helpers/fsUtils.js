@@ -14,7 +14,7 @@ const readFromFile = (filePath) => fs.readFile(filePath, 'utf8');
  * @returns {Promise<void>} A promise that resolves when the file has been written.
  */
 const writeToFile = (destination, content) => 
-  fs.writeFile(destination, JSON.stringify(content, null, 4));
+  fs.writeFile(destination, JSON.stringify(content, null, 4),'utf8');
 
 /**
  * Function to read data from a file and append content to it
