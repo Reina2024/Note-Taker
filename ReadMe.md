@@ -16,6 +16,9 @@
 <li>
 <a href="#usage"> Usage </a>
 </li>
+<li>
+<a href="#images"> Usage </a>
+</li>
 <li><a href="#contributions"> Contributions </a>
 </li>
 <li>
@@ -45,29 +48,41 @@
 
 ## Installation 
  
-   Run it in the browser. Link to deployed site at bottom of ReadMe
+- The generator requires npm.  [See Node.js installation.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+1. Clone the project from [Github Repository](https://github.com/Reina2024/Note-Taker)
+2. In the terminal, move to where the cloned local repo is.
+3. `npm install`
+   - If it does not automatically install the required module, follow below instructions:
+     - `npm i express@4.19.2`
+     - `npm i short-unique-id@5.2.0`
+4. Start the server by `node server.js` in the terminal.  By default it listens to port 3001. 
 
 ## Usage
-
-1. Clone the project from [Github Repository](https://github.com/Reina2024/Note-Taker)
-
-2. Run `node server.js` in the terminal
-
-OR just run it form the browser link at the bottom of the ReadMe file
+1. Once the server is running, open http://localhost:3001 from a browser.
+2. Feel free to play with the note taker from there! You can add, view and delete notes from there.
+3. Note taker on Render: https://note-taker-0wxe.onrender.com
 
 ## Images
 Below are screen shots from the project: 
 
-![Terminal View](./images/.png)
-  ![Terminal View](./images/.png)
-  ![Terminal View](./images/.png)
-![Terminal View](./images/.png)
-![Terminal View](./images/.png)
+![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.31.28 PM.png)
+  ![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.31.39 PM.png)
+  ![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.32.07 PM.png)
+![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.32.20 PM.png)
+![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.32.32 PM.png)
+![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.33.26 PM.png)
+![Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.34.51 PM.png)
+[Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.15 PM.png)
+[Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.30 PM.png)
+[Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.45 PM.png)
 
 
 ## Testing 
 
-  None
+  Use [Insomnia](https://insomnia.rest/download), API:
+  GET Notes
+  POST Notes
+  Delete Notes
 
 ## Contributions 
 
@@ -95,4 +110,4 @@ Below are screen shots from the project:
 
  - [Github Repository](https://github.com/Reina2024/Note-Taker)
 
- - [Deployed Site](https:/)
+ - [Deployed Site](https://note-taker-0wxe.onrender.com)
