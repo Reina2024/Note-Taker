@@ -71,10 +71,12 @@ Below are screen shots from the project:
 ![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.32.20 PM.png)
 ![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.32.32 PM.png)
 ![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.33.26 PM.png)
+![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.33.40 PM.png)
+![App View](./public/assets/images/Screenshot%202024-07-31%20at%2012.34.38 PM.png)
 ![Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.34.51 PM.png)
-[Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.15 PM.png)
-[Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.30 PM.png)
-[Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.45 PM.png)
+![Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.15 PM.png)
+![Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.30 PM.png)
+![Terminal View](./public/assets/images/Screenshot%202024-07-31%20at%2012.35.45 PM.png)
 
 
 ## Testing 
