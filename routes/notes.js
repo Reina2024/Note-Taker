@@ -50,5 +50,20 @@ notes.post('/', (req, res) => {
   }
 });
 
+
+// Delete Route
+notes.delete("/:id", (req, res) => {
+    const id = req.params.id;
+    readFromFile("./db/notes.json")
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        const result = json.filter((notes) => notes.id !== id);
+  
+        writeToFile("./db/notes.json", result);
+  
+        res.json(`Note ${id} has been deleted`);
+      });
+  });
+
 // Export the notes router to be used in other parts of the application
 module.exports = notes;
