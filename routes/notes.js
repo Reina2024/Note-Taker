@@ -4,11 +4,7 @@ const notes = require("express").Router();
 const { v4: uuidv4 } = require("uuid");
 
 // Import helper functions for reading from, appending to, and writing to JSON files
-const {
-  readFromFile,
-  readAndAppend,
-  writeToFile,
-} = require("../helpers/fsUtils");
+const { readFromFile, readAndAppend, writeToFile } = require("../helpers/fsUtils");
 
 // Define API route to retrieve all notes
 notes.get('/', (req, res) => {

@@ -19,7 +19,7 @@ app.get('/', (req, res) =>
 
 // GET route for the notes page
 app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/pages/notes.html'))
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 // Wildcard Route for homepage
