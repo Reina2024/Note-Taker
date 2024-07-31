@@ -17,7 +17,7 @@
 <a href="#usage"> Usage </a>
 </li>
 <li>
-<a href="#images"> Usage </a>
+<a href="#images"> Images </a>
 </li>
 <li><a href="#contributions"> Contributions </a>
 </li>
