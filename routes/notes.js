@@ -6,11 +6,15 @@ const { readFromFile, readAndAppend, writeToFile } = require("../helpers/fsUtils
 notes.get('/', (req, res) => {
   console.info(`${req.method} notes requested`);
 
-  // Read notes from JSON file and send as response
   readFromFile('./db/db.json')
     .then((data) => res.json(JSON.parse(data)))
-    .catch((err) => res.status(500).json({ error: 'Failed to read notes' })); // Handle errors
+    .catch((err) => {
+      console.error("Error reading notes", err);
+      res.status(500).json({ error: 'Failed to read notes' });
+    });
 });
+
+   // Handle errors
 
 // API route to add a new note
 notes.post('/', (req, res) => {
@@ -22,7 +26,7 @@ notes.post('/', (req, res) => {
     const newNote = {
       title,
       text,
-      id: uuidv4(), // Generate a unique ID for the note
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, './db/db.json')
@@ -39,6 +43,7 @@ notes.post('/', (req, res) => {
   }
 });
 
+
 // API route to delete a note by ID
 notes.delete("/:id", (req, res) => {
   const id = req.params.id;
@@ -49,7 +54,11 @@ notes.delete("/:id", (req, res) => {
       return writeToFile("./db/db.json", result);
     })
     .then(() => res.json(`Note ${id} has been deleted`))
-    .catch((err) => res.status(500).json({ error: 'Failed to delete note' }));
+    .catch((err) => {
+      console.error("Error deleting note", err);
+      res.status(500).json({ error: 'Failed to delete note' });
+    });
 });
+
 
 module.exports = notes;

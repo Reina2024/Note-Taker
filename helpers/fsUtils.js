@@ -30,7 +30,9 @@ const readAndAppend = async (content, file) => {
     await writeToFile(file, parsedData);
   } catch (err) {
     console.error('Error reading or appending file:', err);
+    throw err; 
   }
 };
+
 
 module.exports = { readFromFile, writeToFile, readAndAppend };

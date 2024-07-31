@@ -48,7 +48,7 @@ app.get("/api/notes", (req, res) => {
       };
       readAndAppend(newNotes, db)
         .then(() => res.status(201).json({ message: "Note added", note: newNotes }))
-        .catch((err) => res.status(500).json({ error: 'Failed to add note' }));
+        .catch((err) => res.status(500).json({ error: "Failed to add note" }));
     } else {
       res.status(400).json("400 bad request");
     }
@@ -68,7 +68,7 @@ app.get("/api/notes", (req, res) => {
       })
       .then((newNotes) => writeToFile(db, newNotes))
       .then(() => res.status(200).end())
-      .catch((err) => res.status(500).json({ error: 'Failed to delete note' }));
+      .catch((err) => res.status(500).json({ error: "Failed to delete note" }));
   });
 
 app.listen(PORT, () =>
